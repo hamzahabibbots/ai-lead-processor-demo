@@ -546,7 +546,6 @@ function App() {
         {/* Simulator Preset Injector Panel */}
         <div className="sidebar-presets">
           <h3>Simulate New Lead</h3>
-          <p className="presets-desc">Click to inject a fake inbound customer message into the AI workflow pipeline:</p>
           
           <div className="presets-list">
             {SCENARIOS.map((sc) => {
