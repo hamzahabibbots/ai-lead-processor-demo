@@ -139,9 +139,9 @@ export const INITIAL_CHATS: ChatSession[] = [
     source: 'whatsapp',
     contact: '+1 (555) 438-9210',
     status: 'auto-replied',
-    lastMessageTime: '12:02 PM',
-    crmStage: 'Buyer - Active Lead',
-    notes: 'Looking for a 3-bedroom property. Interested in 104 Pinecrest Ranch.',
+    lastMessageTime: '12:04 PM',
+    crmStage: 'Showing Scheduled',
+    notes: 'Sarah Jenkins & husband. Private tour scheduled for 104 Pinecrest Ranch on Sat at 10:00 AM.',
     messages: [
       {
         id: 'msg-s1',
@@ -178,6 +178,48 @@ export const INITIAL_CHATS: ChatSession[] = [
           cost: 0.00058,
           agentName: 'RealtyBot AI'
         }
+      },
+      {
+        id: 'msg-s5',
+        sender: 'client',
+        text: 'Saturday at 10:00 AM works perfectly for me! Can you reserve that slot for us? I will be coming with my husband.',
+        timestamp: '12:03 PM',
+        metadata: {
+          channel: 'whatsapp'
+        }
+      },
+      {
+        id: 'msg-s6',
+        sender: 'system',
+        text: 'n8n Workflow triggered: Booking confirmation request. Processing appointment scheduler.',
+        timestamp: '12:03 PM'
+      },
+      {
+        id: 'msg-s7',
+        sender: 'system',
+        text: 'n8n Integration: Checked availability on Google Calendar. Slot is free. Creating calendar invitation for Saturday at 10:00 AM EST.',
+        timestamp: '12:03 PM'
+      },
+      {
+        id: 'msg-s8',
+        sender: 'ai',
+        text: 'Fantastic, Sarah! I have successfully reserved the **Saturday, June 13th at 10:00 AM EST** tour slot for you and your husband at **104 Pinecrest Ranch**.\n\nI have paged this to our listing agent on duty, Robert Vance. A Google Calendar invitation has been sent to your email with the property address, directions, and Robert\'s contact details. \n\nWe look forward to showing you the home! Let me know if you need anything else in the meantime.',
+        timestamp: '12:04 PM',
+        metadata: {
+          channel: 'whatsapp',
+          intent: 'Showings / Booking',
+          confidence: 0.99,
+          latency: '1.4s',
+          tokens: 210,
+          cost: 0.00042,
+          agentName: 'RealtyBot AI'
+        }
+      },
+      {
+        id: 'msg-s9',
+        sender: 'system',
+        text: 'Follow Up Boss CRM updated: Stage changed to "Showing Scheduled". Google Calendar invite successfully synced and email dispatch paged.',
+        timestamp: '12:04 PM'
       }
     ]
   },
